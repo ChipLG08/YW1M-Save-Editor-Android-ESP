@@ -1,6 +1,6 @@
 # YW1S Save Editor Android (ESP)
 
-Una aplicación de Android que carga el archivo `main.bin` de Yo-kai Watch 1 Smartphones mediante Shizuku, permitiendo editar y guardar los datos de `game0.yw` a `game3.yw`.
+Una aplicación de Android que carga el archivo `main.bin` de Yo-kai Watch 1 Smartphone mediante Shizuku, permitiendo editar y guardar los datos de `game0.yw` a `game3.yw`.
 
 ## Funcionalidades implementadas
 
@@ -10,6 +10,7 @@ Una aplicación de Android que carga el archivo `main.bin` de Yo-kai Watch 1 Sma
 - Visualización de la lista de objetos y modificación de las cantidades existentes dentro de límites seguros.
 - Visualización en modo de solo lectura del Equipamiento, los Objetos Clave, el estado de la Expendekai y la Mansión del Viajero.
 - Creación automática de una copia de seguridad llamada `main.bin.bak` al guardar. El archivo temporal se valida antes de sustituir el original.
+- Soporte para Android 13 en adelante.
 
 ## Archivo de destino (Cambiado respecto al repo original)
 
