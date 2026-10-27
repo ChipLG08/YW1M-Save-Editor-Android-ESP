@@ -1,4 +1,4 @@
-# YW1S Save Editor Android ESP
+# YW1M Save Editor Android ESP
 
 Una aplicación de Android que carga el archivo `main.bin` de Yo-kai Watch 1 Smartphone mediante Shizuku, permitiendo editar y guardar los datos de `game0.yw` a `game3.yw`.
 
