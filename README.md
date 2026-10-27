@@ -31,6 +31,7 @@ Si no posees esta carpeta deberás crearla tú y meter dentro tu `main.bin`.
 
 - Shizuku en modo ADB (sin root) no puede acceder a los datos internos de otras aplicaciones, por lo que no es posible editar las partidas en este modo. Es por eso que se cambio la ruta respecto al repositorio original para que sea más fácil para usuarios sin root.
 - Antes de escribir los cambios, se crea automáticamente una copia de seguridad (`.bak`), pero utiliza la aplicación bajo tu propia responsabilidad.
+- Si encuentras algún bug que no tenga que ver con como está traducido algo, reportalo al creador original.
 
 ## Licencia
 
