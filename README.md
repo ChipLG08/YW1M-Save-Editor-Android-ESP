@@ -1,35 +1,37 @@
-# YWS1 Editor for Android
+# YW1S Save Editor Android (ESP)
 
-「妖怪ウォッチ1 スマホ」の`main.bin`をrootモードのShizuku経由で読み込み、
-`game0.yw`〜`game3.yw`のデータを編集して保存するAndroidアプリです。
+Una aplicación de Android que carga el archivo `main.bin` de Yo-kai Watch 1 Smartphones mediante Shizuku, permitiendo editar y guardar los datos de `game0.yw` a `game3.yw`.
 
-## 実装内容
+## Funcionalidades implementadas
 
-- `crypt.py` / `check.py` の暗号・復号ロジックを Kotlin に移植
-- `main.bin` から `game0.yw` / `game1.yw` / `game2.yw` / `game3.yw` を選択して妖怪リストを抽出
-- 個体値などを Compose UI で編集
-- どうぐの一覧表示と、安全な範囲での既存数量変更
-- そうび、だいじなもの、ガシャstate、さすらい荘の読取り専用表示
-- 保存時に`main.bin.bak`を作成し、一時ファイルを検証してから置換
+- Portada a Kotlin de la lógica de cifrado y descifrado de `crypt.py` / `check.py`.
+- Selección de `game0.yw`, `game1.yw`, `game2.yw` o `game3.yw` dentro de `main.bin` para extraer la lista de Yo-kai.
+- Edición de estadísticas individuales y otros atributos mediante una interfaz de Compose.
+- Visualización de la lista de objetos y modificación de las cantidades existentes dentro de límites seguros.
+- Visualización en modo de solo lectura del Equipamiento, los Objetos Clave, el estado de la Expendekai y la Mansión del Viajero.
+- Creación automática de una copia de seguridad llamada `main.bin.bak` al guardar. El archivo temporal se valida antes de sustituir el original.
 
-## 対象ファイル
+## Archivo de destino (Cambiado respecto al repo original)
 
-- `/data/user/<現在のユーザーID>/jp.co.level5.yws1/files/save/main.bin`
+- `/data/user/<ID_del_usuario_actual>/Android/media/jp.co.level5.yws1/save/main.bin`
 
-## 使い方
+Si no posees esta carpeta deberás crearla tú y meter dentro tu `main.bin`.
 
-1. rootモードでShizukuを起動
-2. アプリを起動し、表示されたShizuku許可ダイアログを許可
-3. `game0`〜`game3`から編集対象を選択
-4. 妖怪やセーブ情報を編集
-5. `保存`で選択中セーブへ反映
+## Uso
 
-## 注意
+1. Inicia Shizuku tras haberlo configurado previamente.
+2. Abre la aplicación y concede los permisos de Shizuku cuando aparezca el diálogo correspondiente.
+3. Selecciona la partida que quieras editar, desde `game0` hasta `game3`.
+4. Edita los Yo-kai o los datos de la partida.
+5. Pulsa `Guardar` para aplicar los cambios a la partida seleccionada.
+6. En caso de que no hayas cambiado la ruta de la partida guardada de `/Android/data/jp.co.level5.yws1/files/save/main.bin` a `/Android/media/jp.co.level5.yws1/save/main.bin`, pega el `main.bin` resultante en `/Android/data/jp.co.level5.yws1/files/save/` para aplicar los cambios.
 
-- ADBモード（非root）のShizukuでは、他アプリの内部データへアクセスできないため編集できません。
-- 書き込み前に自動バックアップ（`.bak`）を作成しますが、自己責任で利用してください。
+## Advertencias
 
-## ライセンス
+- Shizuku en modo ADB (sin root) no puede acceder a los datos internos de otras aplicaciones, por lo que no es posible editar las partidas en este modo. Es por eso que se cambio la ruta respecto al repositorio original para que sea más fácil para usuarios sin root.
+- Antes de escribir los cambios, se crea automáticamente una copia de seguridad (`.bak`), pero utiliza la aplicación bajo tu propia responsabilidad.
 
-- このプロジェクトのコードは MIT License で公開しています。詳細は `LICENSE` を参照してください。
-- 同梱している第三者著作物のライセンス情報は `THIRD_PARTY_NOTICES.md` を参照してください。
+## Licencia
+
+- El código de este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
+- Para consultar la información sobre las licencias de los materiales de terceros incluidos en el proyecto, consulta `THIRD_PARTY_NOTICES.md`.
